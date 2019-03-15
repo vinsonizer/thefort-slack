@@ -8,6 +8,12 @@ var endDate = new Date(startDate.getTime() + 604800000)
 wp.getEvents(startDate, endDate, function (err, results) {
   if (err) console.log(err)
   else {
-    console.log(results)
+    console.log('found ' + results.data.length + ' events')
+    results.data.forEach(function (currentValue) {
+      wp.getEventDetail(currentValue, function (err, eventDetail) {
+        if (err) console.log(err)
+        else console.log(eventDetail)
+      })
+    })
   }
 })
