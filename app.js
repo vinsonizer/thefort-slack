@@ -1,12 +1,13 @@
 // sample app to show usage
 var wp = require('./worshipplanning')
-var token
 
-wp.login(function (err, body) {
-  if (err) console.log('err => ' + err)
+var startDate = new Date()
+// ms in a week
+var endDate = new Date(startDate.getTime() + 604800000)
+
+wp.getEvents(startDate, endDate, function (err, results) {
+  if (err) console.log(err)
   else {
-    this.token = body.token
+    console.log(results)
   }
 })
-
-console.log(token)
