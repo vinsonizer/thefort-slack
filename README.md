@@ -8,6 +8,7 @@ Create a file named config.js in this directory with the following contents, but
 
 ```
 var config = {}
+config.wp = {}
 
 config.wp.username = ''
 config.wp.password = ''
