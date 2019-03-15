@@ -7,19 +7,6 @@ Node
 
 ## Initial Setup
 
-Run ```node install```
-
-Create a file named config.js in this directory with the following contents, but with accurate values:
-
-```
-var config = {}
-config.wp = {}
-
-config.wp.username = ''
-config.wp.password = ''
-config.wp.apikey   = ''
-config.wp.baseurl  = ''
-
-module.exports = config
-```
+Run ```npm install```
+Copy config_example.js to config.js and edit with proper values
 Now run node app.js for the test
