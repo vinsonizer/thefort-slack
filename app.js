@@ -1,16 +1,12 @@
-var Config = require('./config')
-var Request = require('request')
+// sample app to show usage
+var wp = require('./worshipplanning')
+var token
 
-Request.post({
-  'headers': { 'content-type': 'application/json', 'key': Config.wp.apikey },
-  'url': Config.wp.baseurl + '/authentication/login',
-  'body': JSON.stringify({
-    'username': Config.wp.username,
-    'password': Config.wp.password
-  })
-}, (error, response, body) => {
-  if (error) {
-    return console.dir(error)
+wp.login(function (err, body) {
+  if (err) console.log('err => ' + err)
+  else {
+    this.token = body.token
   }
-  console.dir(body)
 })
+
+console.log(token)

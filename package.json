@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vinsonizer/thefort-slack#readme",
   "dependencies": {
+    "node-debugger": "^1.0.0",
     "request": "^2.88.0"
   }
 }
