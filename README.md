@@ -2,7 +2,12 @@
 
 Slack Integrations for The Fort
 
+## Pre-Requisites
+Node
+
 ## Initial Setup
+
+Run ```node install```
 
 Create a file named config.js in this directory with the following contents, but with accurate values:
 
@@ -17,3 +22,4 @@ config.wp.baseurl  = ''
 
 module.exports = config
 ```
+Now run node app.js for the test
