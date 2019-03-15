@@ -8,5 +8,7 @@ Node
 ## Initial Setup
 
 Run ```npm install```
+
 Copy config_example.js to config.js and edit with proper values
+
 Now run node app.js for the test
